@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     # Internal apps
     'label_tag_attr',
     'example',
+    # Third party apps
+    'widget_tweaks',
 )
 
 MIDDLEWARE_CLASSES = (
