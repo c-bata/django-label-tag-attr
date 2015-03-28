@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Internal apps
+    'label_tag_attr',
     'example',
 )
 
