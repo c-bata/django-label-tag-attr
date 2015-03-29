@@ -18,8 +18,13 @@ def render_form(text, form=None, **context_args):
 
 
 class TestFieldAttributeNode(TestCase):
-    def test_rendered_label_has_id(self):
+    def test_rendered_label_has_id_and_label(self):
         res = render_form('{% render_label form.sample_field %}',
                           form=MyForm())
         self.assertIn('for="id_sample_field"', res)
         self.assertIn('SampleText', res)
+
+    def test_rendered_label_has_arguments(self):
+        res = render_form('{% render_label form.sample_field class="test" %}',
+                          form=MyForm())
+        self.assertIn('class="test', res)
