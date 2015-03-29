@@ -2,7 +2,8 @@
 django-label-tag-attr
 =====================
 
-[![Build Status](https://travis-ci.org/c-bata/django-label-tag-attr.svg?branch=master)](https://travis-ci.org/c-bata/django-label-tag-attr)
+.. image:: https://travis-ci.org/c-bata/django-label-tag-attr.svg
+    :target: https://travis-ci.org/c-bata/django-label-tag-attr
 
 More easy to alter css classes and html attributes.
 This library can render a form label like `django-widget-tweaks <https://github.com/kmike/django-widget-tweaks>`_
@@ -49,3 +50,4 @@ Resources
 =========
 
 * `Github <https://github.com/c-bata/django-label-tag-attr>`_
+* `PyPI <https://pypi.python.org/pypi/django-label-tag-attr>`_
