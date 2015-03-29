@@ -16,11 +16,12 @@ setup(
     author=__author__,
     author_email='contact@c-bata.link',
     url='https://github.com/c-bata/django-label-tag-attr',
-    description='Django library to alter css classes and html attributes.',
+    description="Add css classes and html tag attributes "
+                "to django form's label.",
     long_description=README + '\n\n' + CHANGES,
     packages=['label_tag_attr'],
     install_requires=['Django'],
-    keywords=['web', 'label_tag'],
+    keywords=['web', 'django', 'form', 'label_tag_attr'],
     license='MIT License',
     include_package_data=True,
 )
