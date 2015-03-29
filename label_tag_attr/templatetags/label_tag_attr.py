@@ -3,31 +3,29 @@ from django.template import Node
 
 register = template.Library()
 
+LABEL_STR_FORMAT = '<label for="{field.auto_id}" {attr}>{field.label}</label>'
+
 
 @register.tag(name="render_label")
 def render_label(parser, token):
     try:
         bits = token.split_contents()
-        tag_name = bits[0]
-        label_field = bits[1]
-        form_attrs = bits[2:]
     except ValueError:
         raise template.TemplateSyntaxError(
-            '%r tag requires a form field followed by a list of attributes'
-            ' and values in the form attr="value"' % tag_name)
+            '%r tag requires a form field followed by a list of attributes '
+            'and values in the form attr="value"' % token.split_contents()[0])
 
-    label_field = parser.compile_filter(label_field)
-    return FieldAttributeNode(label_field, form_attrs)
+    tag_name, form_field, form_attr = bits[0], bits[1], bits[2:]
+    form_field = parser.compile_filter(form_field)
+    return FieldAttributeNode(form_field, form_attr)
 
 
 class FieldAttributeNode(Node):
-    def __init__(self, form_field, form_attrs):
+    def __init__(self, form_field, form_attr):
         self.form_field = form_field
-        self.form_attrs = form_attrs
+        self.form_attr = form_attr
 
     def render(self, context):
         bounded_field = self.form_field.resolve(context)
-        return '<label for="%s" %s>%s</label>'\
-               % (bounded_field.auto_id,
-                  ''.join(self.form_attrs),
-                  bounded_field.label)
+        return LABEL_STR_FORMAT.format(field=bounded_field,
+                                       attr=''.join(self.form_attr))
