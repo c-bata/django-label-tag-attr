@@ -36,7 +36,7 @@ Previous
 Use django-label-tag-attr
 -------------------------
 
-``render_field`` template tag for customizing form's label by using an HTML-like syntax.
+``render_label`` template tag for customizing form's label by using an HTML-like syntax.
 
 .. code-block:: html
 
