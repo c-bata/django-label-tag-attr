@@ -13,11 +13,23 @@
     <div class="container">
         <h1>django-label-tag-attr example</h1>
 
-        {% render_label form.text class="control-label" style="color: #0000ff" %}
-        {% render_field form.text class="form-control" %}
+        <div class="form-group">
+            <div class="col-xs-2">
+                {% render_label form.text class="control-label" %}
+            </div>
+            <div class="col-xs-10">
+                {% render_field form.text class="form-control" %}
+            </div>
+        </div>
 
-        {% render_label form.choices class="control-label" style="color: #0000ff" %}
-        {% render_field form.choices class="form-control" %}
+        <div class="form-group">
+            <div class="col-xs-2">
+                {% render_label form.choices class="control-label" %}
+            </div>
+            <div class="col-xs-10">
+                {% render_field form.choices class="form-control" %}
+            </div>
+        </div>
 
     </div>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
