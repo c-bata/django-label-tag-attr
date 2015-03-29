@@ -12,11 +12,11 @@
 <body>
     <div class="container">
         <h1>django-label-tag-attr example</h1>
-        <label for="id_text">Char field</label>
+
+        {% render_label form.text class="control-label" style="color: #0000ff" %}
         {% render_field form.text class="form-control" %}
 
-        <p>以下render_label</p>
-        {% render_label form.choices.label class="control-label" style="aaa" %}
+        {% render_label form.choices class="control-label" style="color: #0000ff" %}
         {% render_field form.choices class="form-control" %}
 
     </div>

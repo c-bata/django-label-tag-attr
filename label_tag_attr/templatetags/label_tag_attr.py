@@ -28,6 +28,6 @@ class FieldAttributeNode(Node):
     def render(self, context):
         bounded_field = self.form_field.resolve(context)
         return '<label for="%s" %s>%s</label>'\
-               % ('auto_id',
+               % (bounded_field.auto_id,
                   ''.join(self.form_attrs),
-                  bounded_field)
+                  bounded_field.label)
