@@ -23,15 +23,15 @@ Then add 'label_tag_attr' to INSTALLED_APPS.
 Usage
 =====
 
-Previous
---------
+Previous(Use django-widget-tweaks only)
+---------------------------------------
 
 .. code-block:: html
 
     {% load widget_tweaks %}
 
-    <label id="{{ form.text.id_for_label }}" class="control-label">{{ form.text.label }}</label>
-    {% render_label form.text class="form-control" %}   {# django-widget-tweaks use #}
+    <label id="{{ form.text.auto_id }}" class="control-label">{{ form.text.label }}</label>
+    {% render_label form.text class="form-control" %}
 
 Use django-label-tag-attr
 -------------------------
@@ -43,8 +43,8 @@ Use django-label-tag-attr
     {% load label_tag_attr %}
     {% load widget_tweaks %}
 
-    {% render_label form.text class="control-label" %}   {# this library use #}
-    {% render_field form.text class="form-control" %}    {# django-widget-tweaks use #}
+    {% render_label form.text class="control-label" %}
+    {% render_field form.text class="form-control" %}
 
 Resources
 =========
