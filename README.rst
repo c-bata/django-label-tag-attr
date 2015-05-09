@@ -5,6 +5,9 @@ django-label-tag-attr
 .. image:: https://travis-ci.org/c-bata/django-label-tag-attr.svg
     :target: https://travis-ci.org/c-bata/django-label-tag-attr
 
+.. image:: https://badge.fury.io/py/django-label-tag-attr.svg
+    :target: http://badge.fury.io/py/django-label-tag-attr
+
 Add css classes and html tag attributes to form's label in django templates.
 This library can render a form label like `django-widget-tweaks <https://github.com/kmike/django-widget-tweaks>`_
 

@@ -2,7 +2,7 @@ import os
 from setuptools import setup
 
 __author__ = 'Masashi Shibata <contact@c-bata.link>'
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 
 BASE_PATH = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(BASE_PATH, 'README.rst')).read()
@@ -21,7 +21,7 @@ setup(
     long_description=README + '\n\n' + CHANGES,
     packages=['label_tag_attr'],
     install_requires=['Django'],
-    keywords=['web', 'django', 'form', 'label_tag_attr'],
+    keywords=['django', 'form', 'label', 'label_tag_attr'],
     license='MIT License',
     include_package_data=True,
 )

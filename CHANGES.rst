@@ -5,3 +5,10 @@ CHANGES
 ------------------
 
 Initial release
+
+
+1.0.2 (2015-05-09)
+------------------
+
+- Support django1.8 and python2.7.
+- Bug fixed.
